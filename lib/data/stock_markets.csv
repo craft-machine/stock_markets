@@ -1,0 +1,247 @@
+
+Continent,Country,Name,MIC,Last changed
+Asia,Kazakhstan ,Astana International Financial Centre,AIXK,2018-11-18
+South America,Argentina ,Bolsas y Mercados Argentinos,,2018-04-02
+North America,United States of America ,Delaware Board of Trade,,2018-04-02
+Australia & Oceania,Australia ,Chi-X Asia Pacific,,2018-04-02
+Australia & Oceania,Australia ,Chi-X Australia,CHIA,2018-04-02
+South America,Mexico,BIVA,BIVA,2018-01-06
+Africa,South Africa,Equity Express Securities Exchange,,2017-12-11
+Africa,South Africa,4AX,,2017-09-29
+Africa,South Africa ,ZAR X,ZARX,2018-11-18
+North America,Curacao,Dutch Caribbean Securities Exchange,DCSX,2017-09-12
+North America,Canada ,NEO,NEOE,2017-09-06
+North America,Canada ,Canadian Securities Exchange,CNSX?,2017-09-06
+Western Europe,Germany ,XETRA,XETR,2017-08-21
+Western Europe,France ,Euronext Paris,XPAR,2017-08-19
+Western Europe,United Kingdom ,Euronext London,XLDN,2017-08-19
+Eastern Europe,Albania ,Tirana Stock Exchange,XTIR,2017-08-16
+Africa,Algeria,Bourse d'Alger,XALG,2017-08-16
+Africa,Angola,BODIVA,XBDV,2017-08-16
+South America,Argentina ,Buenos Aires Stock Exchange,XBUE,2017-08-16
+South America,Argentina ,Mercado Abierto Electrónico,XMAB,2017-08-16
+Eastern Europe,Armenia ,NASDAQ OMX Armenia,XARM,2017-08-16
+Australia & Oceania,Australia ,Australian Securities Exchange,XASX,2017-08-16
+Australia & Oceania,Australia ,Block Event,BLEV,2017-08-16
+Australia & Oceania,Australia ,IR Plus Securities Exchange,SIMV,2017-08-16
+Australia & Oceania,Australia ,National Stock Exchange of Australia,XNEC,2017-08-16
+Australia & Oceania,Australia ,Sydney Stock Exchange,APXL,2017-08-16
+Western Europe,Austria ,Wiener Börse,XWBO,2017-08-16
+Asia,Azerbaijan ,Baku Stock Exchange,BSEX,2017-08-16
+North America,Bahamas ,Bahamas International Securities Exchange,XBAA,2017-08-16
+Middle East,Bahrain ,Bahrain Bourse,XBAH,2017-08-16
+Asia,Bangladesh ,Chittagong Stock Exchange,XCHG,2017-08-16
+Asia,Bangladesh ,Dhaka Stock Exchange,XDHA,2017-08-16
+North America,Barbados ,Barbados Stock Exchange,XBAB,2017-08-16
+Eastern Europe,Belarus,Belarusian Currency and Stock Exchange,BCSE,2017-08-16
+Western Europe,Belgium ,Euronext Brussels,XBRU,2017-08-16
+North America,Bermuda ,Bermuda Stock Exchange,XBDA,2017-08-16
+Asia,Bhutan,Royal Securities Exchange of Bhutan,,2017-08-16
+South America,Bolivia ,Bolsa de Valores de Bolivia,XBOL,2017-08-16
+Eastern Europe,Bosnia and Herzegovina ,Banja Luka Stock Exchange,XBLB,2017-08-16
+Eastern Europe,Bosnia and Herzegovina ,Sarajevo Stock Exchange,XSSE,2017-08-16
+Africa,Botswana ,Botswana Stock Exchange,XBOT,2017-08-16
+South America,Brazil ,B3 - Brasil Bolsa Balcão,BVMF,2017-08-16
+South America,Brazil ,Bolsa de Valores Minab - Espírito Santo,BOVM,2017-08-16
+Eastern Europe,Bulgaria ,Bulgarian Stock Exchange,XBUL,2017-08-16
+Asia,Cambodia,Cambodia Securities Exchange,XCSX,2017-08-16
+Africa,Cameroon ,Douala Stock Exchange,XDSX,2017-08-16
+North America,Canada ,Montreal Exchange,XMOD,2017-08-16
+North America,Canada ,Nasdaq Canada,XCSD,2017-08-16
+North America,Canada ,TMX,TMXS,2017-08-16
+North America,Canada ,Toronto Stock Exchange,XTSE,2017-08-16
+Africa,Cape Verde ,Bolsa de Valores de Cabo Verde,XBVC,2017-08-16
+North America,Cayman Islands ,Cayman Islands Stock Exchange,XCAY,2017-08-16
+Western Europe,Channel Islands ,Channel Islands Stock Exchange,,2017-08-16
+South America,Chile ,Santiago Electronic Stock Exchange,XBCL,2017-08-16
+South America,Chile ,Santiago Stock Exchange,XSGO,2017-08-16
+South America,Chile ,Valparaiso Stock Exchange,BOVA,2017-08-16
+Asia,China ,Shanghai Stock Exchange,XSHG,2017-08-16
+Asia,China ,Shenzhen Stock Exchange,XSHE,2017-08-16
+South America,Colombia ,Bolsa de Valores de Colombia,XBOG,2017-08-16
+North America,Costa Rica ,Bolsa Nacional de Valores de Costa Rica,XBNV,2017-08-16
+Eastern Europe,Croatia ,Zagreb Stock Exchange,XZAG,2017-08-16
+Eastern Europe,Cyprus ,Cyprus Stock Exchange,XCYS,2017-08-16
+Eastern Europe,Czech Republic ,Prague Stock Exchange,XPRAG,2017-08-16
+Eastern Europe,Czech Republic ,RM-System Czech Stock Exchange,XRMZ,2017-08-16
+Western Europe,Denmark ,Nasdaq Copenhagen,XCSE,2017-08-16
+North America,Dominican Republic ,Bolsa de Valores de la República Dominicana,XBVR,2017-08-16
+South America,Ecuador ,Bolsa de Valores de Guayaquil,XGUA,2017-08-16
+South America,Ecuador ,Bolsa de Valores de Quito,XQUI,2017-08-16
+Africa,Egypt ,Egyptian Exchange,XCAI,2017-08-16
+Africa,Egypt ,Nilex,NILX,2017-08-16
+North America,El Salvador ,Bolsa de Valores de El Salvador,XSVA,2017-08-16
+Eastern Europe,Estonia ,Tallinn Stock Exchange,XTAL,2017-08-16
+Australia & Oceania,Fiji ,South Pacific Stock Exchange,XSPS,2017-08-16
+Western Europe,Finland ,Nasdaq Helsinki,XHEL,2017-08-16
+Africa,Gabon,Bourse Régionale des Valeurs Mobilières d'Afrique Centrale,,2017-08-16
+Asia,Georgia ,Georgian Stock Exchange,XGSE,2017-08-16
+Western Europe,Germany ,Börse Berlin,XBER,2017-08-16
+Western Europe,Germany ,Börse Düsseldorf,XDUS,2017-08-16
+Western Europe,Germany ,Börse Hamburg & Hannover,HAMB,2017-08-16
+Western Europe,Germany ,Börse München,XMUN,2017-08-16
+Western Europe,Germany ,Börse Stuttgart,XSTU,2017-08-16
+Western Europe,Germany ,Deutsche Börse Group,XFRA,2017-08-16
+Western Europe,Germany ,Eurex,XEUR,2017-08-16
+Western Europe,Germany ,Tradegate Exchange,TGAT,2017-08-16
+Africa,Ghana ,Ghana Stock Exchange,XGHA,2017-08-16
+Western Europe,Gibraltar,Gibraltar Stock Exchange,GSXL,2017-08-16
+Western Europe,Greece ,Athens Stock Exchange,ASEX,2017-08-16
+North America,Guatemala ,Bolsa Nacional de Valores,XGTG,2017-08-16
+Western Europe,Guernsey,International Stock Exchange,XCIE,2017-08-16
+South America,Guyana ,Guyana Stock Exchange,GSCI,2017-08-16
+North America,Haiti ,Haitian Stock Exchange,,2017-08-16
+North America,Honduras ,Bolsa Centroamericana de Valores,XBCV,2017-08-16
+Asia,Hong Kong ,Hong Kong Growth Enterprise Market,XGEM,2017-08-16
+Asia,Hong Kong ,Hong Kong Stock Exchange,XHKG,2017-08-16
+Eastern Europe,Hungary ,Budapest Stock Exchange,XBUD,2017-08-16
+Western Europe,Iceland ,Nasdaq Iceland,XICE,2017-08-16
+Asia,India ,Ahmedabad Stock Exchange,,2017-08-16
+Asia,India ,Bangalore Stock Exchange,XBAN,2017-08-16
+Asia,India ,Bombay Stock Exchange,XBOM,2017-08-16
+Asia,India ,BSE SME,BSME,2017-08-16
+Asia,India ,Calcutta Stock Exchange,XCAL,2017-08-16
+Asia,India ,Cochin Stock Exchange,,2017-08-16
+Asia,India ,Coimbatore Stock Exchange,,2017-08-16
+Asia,India ,Delhi Stock Exchange,XDES,2017-08-16
+Asia,India ,Inter-Connected Stock Exchange of India,ISEX,2017-08-16
+Asia,India ,Ludhiana Stock and Capital,,2017-08-16
+Asia,India ,Metropolitan Stock Exchange,,2017-08-16
+Asia,India ,National Stock Exchange of India,XNSE,2017-08-16
+Asia,India ,OTC Exchange of India,OTCX,2017-08-16
+Asia,India ,Pune Stock Exchange,,2017-08-16
+Asia,India ,Saurashtra Kutch Stock Exchange,,2017-08-16
+Asia,India ,United Stock Exchange of India,XUSE,2017-08-16
+Asia,India ,Vadodara Stock Exchange,,2017-08-16
+Asia,Indonesia ,Indonesia Stock Exchange,XIDX,2017-08-16
+Asia,Iran ,Iran Fara Bourse,,2017-08-16
+Middle East,Iran ,Tehran Stock Exchange,XTEH,2017-08-16
+Middle East,Iraq ,Iraq Stock Exchange,XIQS,2017-08-16
+Western Europe,Ireland ,Irish Stock Exchange,XDUB,2017-08-16
+Middle East,Israel ,Tel Aviv Stock Exchange,XTAE,2017-08-16
+Western Europe,Italy ,Borsa Italiana,XMIL,2017-08-16
+Africa,Ivory Coast,Bourse Regionale des Valeurs Mobilieres,XBRV,2017-08-16
+North America,Jamaica ,Jamaica Stock Exchange,XJAM,2017-08-16
+Asia,Japan ,Chi-X Japan,CHIJ,2017-08-16
+Asia,Japan ,Daiwa Securities,DRCT,2017-08-16
+Asia,Japan ,Fukuoka Stock Exchange,XFKA,2017-08-16
+Asia,Japan ,Japan Exchange Group,XJPX,2017-08-16
+Asia,Japan ,Nagoya Stock Exchange,XNGO,2017-08-16
+Asia,Japan ,Sapporo Securities Exchange,XSAP,2017-08-16
+Asia,Japan ,SBI Japannext,SBIJ,2017-08-16
+Middle East,Jordan ,Amman Stock Exchange,XAMM,2017-08-16
+Asia,Kazakhstan ,Kazakhstan Stock Exchange,XKAZ,2017-08-16
+Africa,Kenya ,Nairobi Stock Exchange,XNAI,2017-08-16
+Middle East,Kuwait ,Kuwait Stock Exchange,XKUW,2017-08-16
+Asia,Kyrgyzstan ,Kyrgyz Stock Exchange,XKSE,2017-08-16
+Asia,Laos,Lao Securities Exchange,XLAO,2017-08-16
+Eastern Europe,Latvia ,Riga Stock Exchange,XRIS,2017-08-16
+Middle East,Lebanon ,Beirut Stock Exchange,XBEY,2017-08-16
+Africa,Lesotho,Maseru Securities Exchange,,2017-08-16
+Eastern Europe,Lithuania ,Vilnius Stock Exchange,XLIT,2017-08-16
+Western Europe,Luxembourg ,Luxembourg Stock Exchange,XLUX,2017-08-16
+Eastern Europe,Macedonia ,Macedonian Stock Exchange,XMAE,2017-08-16
+Africa,Malawi ,Malawi Stock Exchange,XMSW,2017-08-16
+Asia,Malaysia ,Bursa Malaysia,XKLS,2017-08-16
+Asia,Maldives ,Maldives Stock Exchange,MALX,2017-08-16
+Western Europe,Malta ,Malta Stock Exchange,XMAL,2017-08-16
+Western Europe,Malta ,Malta Stock Exchange Prospects,PROS,2017-08-16
+Africa,Mauritius ,Stock Exchange of Mauritius,XMAU,2017-08-16
+North America,Mexico ,Bolsa Mexicana de Valores,XMEX,2017-08-16
+Western Europe,Moldova,Moldova Stock Exchange,XMOL,2017-08-16
+Asia,Mongolia ,Mongolian Stock Exchange,XULA,2017-08-16
+Eastern Europe,Montenegro ,Montenegro Stock Exchange,XMNX,2017-08-16
+Africa,Morocco ,Casablanca Stock Exchange,XCAS,2017-08-16
+Africa,Mozambique,Bolsa de Valores de Mozambique,XBVM,2017-08-16
+Asia,Myanmar,Myanmar Securities Exchange Centre,,2017-08-16
+Asia,Myanmar,Yangon Stock Exchange,,2017-08-16
+Africa,Namibia ,Namibian Stock Exchange,XNAM,2017-08-16
+Asia,Nepal ,Nepal Stock Exchange,XNEP,2017-08-16
+Western Europe,Netherlands ,Euronext Amsterdam,XAMS,2017-08-16
+Western Europe,Netherlands ,Nxchange,XNXC,2017-08-16
+Australia & Oceania,New Zealand ,New Zealand Exchange,XNZE,2017-08-16
+North America,Nicaragua ,Bolsa de Valores de Nicaragua,XMAN,2017-08-16
+Africa,Nigeria ,Nigerian Stock Exchange,XNSA,2017-08-16
+Western Europe,Norway ,Oslo Stock Exchange,XOSL,2017-08-16
+Middle East,Oman ,Muscat Securities Market,XMUS,2017-08-16
+Asia,Pakistan ,Lahore Stock Exchange,,2017-08-16
+Asia,Pakistan ,Pakistan Stock Exchange,XKAR,2017-08-16
+Middle East,Palestine ,Palestine Securities Exchange,XPAE,2017-08-16
+North America,Panama ,Bolsa de Valores de Panama,XPTY,2017-08-16
+Australia & Oceania,Papua New Guinea,Port Moresby Stock Exchange,XPOM,2017-08-16
+South America,Paraguay,Bolsa de Valores & Productos de Asuncíon,XVPA,2017-08-16
+South America,Peru ,Bolsa de Valores de Lima,XLIM,2017-08-16
+Asia,Philippines ,Philippine Stock Exchange,XPHS,2017-08-16
+Eastern Europe,Poland ,NewConnect,XNCO,2017-08-16
+Eastern Europe,Poland ,Warsaw Stock Exchange,XWAR,2017-08-16
+Western Europe,Portugal ,Euronext Lisbon,XLIS,2017-08-16
+Western Europe,Portugal ,OPEX,OPEX,2017-08-16
+Middle East,Qatar,Qatar Stock Exchange,DSMD,2017-08-16
+Eastern Europe,Romania ,Bucharest Stock Exchange,XRAS,2017-08-16
+Eastern Europe,Russia ,Moscow Exchange,MISX,2017-08-16
+Eastern Europe,Russia ,Saint Petersburg Stock Exchange,XPET,2017-08-16
+Eastern Europe,Russia ,Siberian Exchange,XSIB,2017-08-16
+Africa,Rwanda,Rwanda Stock Exchange,RSEX,2017-08-16
+North America,Saint Kitts and Nevis,Eastern Caribbean Securities Exchange,XECS,2017-08-16
+Middle East,Saudi Arabia ,Saudi Stock Exchange,XSAU,2017-08-16
+Eastern Europe,Serbia,Belgrade Stock Exchange,XBEL,2017-08-16
+Africa,Seychelles,Seychelles Securities Exchange (Trop-X),TRPX,2017-08-16
+Asia,Singapore ,Singapore Exchange,XSES,2017-08-16
+Eastern Europe,Slovakia ,Bratislava Stock Exchange,XBRA,2017-08-16
+Eastern Europe,Slovenia ,Ljubljana Stock Exchange,XLJU,2017-08-16
+Africa,Somalia,Somali Stock Exchange,,2017-08-16
+Africa,South Africa ,A2X Markets,A2XX,2017-08-16
+Africa,South Africa ,Johannesburg Stock Exchange,XJSE,2017-08-16
+Asia,South Korea ,Korea New Exchange,XKON,2017-08-16
+Asia,South Korea ,Korea Stock Exchange,XKRX,2017-08-16
+Asia,South Korea ,KOSDAQ Securities Exchange,XKOS,2017-08-16
+Western Europe,Spain ,Bolsa de Bilbao,XBIL,2017-08-16
+Western Europe,Spain ,Bolsa de Madrid,XMAD,2017-08-16
+Western Europe,Spain ,Bolsa de Valencia,XVAL,2017-08-16
+Western Europe,Spain ,Borsa de Barcelona,XBAR,2017-08-16
+Western Europe,Spain ,Latibex,XLAT,2017-08-16
+Asia,Sri Lanka ,Colombo Stock Exchange,XCOL,2017-08-16
+Africa,Sudan ,Khartoum Stock Exchange,XKHA,2017-08-16
+Africa,Swaziland ,Swaziland Stock Exchange,XSWA,2017-08-16
+Western Europe,Sweden ,Aktietorget,XSAT,2017-08-16
+Western Europe,Sweden ,Nasdaq Stockholm,XSTO,2017-08-16
+Western Europe,Sweden ,Nordic Growth Market,XNGM,2017-08-16
+Western Europe,Switzerland ,Berne eXchange,XBRN,2017-08-16
+Western Europe,Switzerland ,SIX Swiss Exchange,XSWX,2017-08-16
+Middle East,Syria,Damascus Securities Exchange,XDSE,2017-08-16
+Asia,Taiwan ,Taipei Exchange,ROCO,2017-08-16
+Asia,Taiwan ,Taiwan Stock Exchange,XTAI,2017-08-16
+Africa,Tanzania ,Dar-es-Salaam Stock Exchange,XDAR,2017-08-16
+Asia,Thailand ,Stock Exchange of Thailand,XBKK,2017-08-16
+North America,Trinidad and Tobago ,Trinidad and Tobago Stock Exchange,XTRN,2017-08-16
+Africa,Tunisia ,Bourse de Tunis,XTUN,2017-08-16
+Eastern Europe,Turkey ,Borsa İstanbul,XIST,2017-08-16
+Africa,Uganda ,Uganda Securities Exchange,XUGA,2017-08-16
+Eastern Europe,Ukraine ,East European Stock Exchange,EESE,2017-08-16
+Eastern Europe,Ukraine ,PFTS Ukraine Stock Exchange,PFTS,2017-08-16
+Eastern Europe,Ukraine ,Stock Exchange Perspectiva,SEPE,2017-08-16
+Eastern Europe,Ukraine ,Ukrainian Exchange,UKEX,2017-08-16
+Middle East,United Arab Emirates ,Abu Dhabi Securities Market,XADS,2017-08-16
+Middle East,United Arab Emirates ,Dubai Financial Market,XDFM,2017-08-16
+Middle East,United Arab Emirates ,Nasdaq Dubai,DIFX,2017-08-16
+Western Europe,United Kingdom ,Aquis Exchange,AQXE,2017-08-16
+Western Europe,United Kingdom ,Asset Match,AMPX,2017-08-16
+Western Europe,United Kingdom ,London Stock Exchange,XLON,2017-08-16
+Western Europe,United Kingdom ,NEX,NEXS,2017-08-16
+Western Europe,United Kingdom ,Turquoise,TRQX,2017-08-16
+North America,United States of America ,Bats BYX Exchange,BYXD,2017-08-16
+North America,United States of America ,Bats EDGA Exchange,EDGA,2017-08-16
+North America,United States of America ,Bats US,BATS,2017-08-16
+North America,United States of America ,BatsEDGX Exchange,EDGX,2017-08-16
+North America,United States of America ,Chicago Stock Exchange,XCHI,2017-08-16
+North America,United States of America ,Investors Exchange,IEXG,2017-08-16
+North America,United States of America ,NASDAQ,XNAS,2017-08-16
+North America,United States of America ,New York Stock Exchange,XNYS,2017-08-16
+North America,United States of America ,North American Derivatives Exchange NADEX,HEGX,2017-08-16
+South America,Uruguay ,Bolsa de Valores de Montevideo,XMNT,2017-08-16
+South America,Uruguay ,Bolsa Electronica de Valores de Uruguay,BVUR,2017-08-16
+Asia,Uzbekistan ,Tashkent Stock Exchange,XSTE,2017-08-16
+Asia,Vietnam ,Hanoi Stock Exchange,HSTC,2017-08-16
+Asia,Vietnam ,Ho Chi Minh Stock Exchange,XSTC,2017-08-16
+Africa,Zambia ,Lusaka Stock Exchange,XLUS,2017-08-16
+Africa,Zimbabwe ,Zimbabwe Stock Exchange,XZIM,2017-08-16
