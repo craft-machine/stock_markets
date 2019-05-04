@@ -3,16 +3,14 @@ require 'csv'
 
 module StockMarkets
   class FileDataProcessor
-
-    attr_accessor :format, :data
+    attr_accessor :data
 
     def initialize
-      @format = 'json'
       @data = []
     end
 
     def load_from_disk
-      self.data = CSV.table(File.expand_path("../../data/stock_markets.csv", __FILE__))
+      self.data = CSV.table(StockMarkets.configuration.data_file_path)
       self
     end
 
