@@ -2,8 +2,7 @@ sudo: false
 language: ruby
 bundler_args: --without tools
 before_install:
-  - gem update --system
-  - gem update bundler
+  - gem install bundler --version '~> 1.17'
 cache: bundler
 rvm:
   - 2.0.0
