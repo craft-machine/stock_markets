@@ -21,8 +21,10 @@ module StockMarkets
         stock_markets
       end
 
+      private
+
       def stock_markets
-        @_stock_markets ||= FileDataProcessor.new.load_data!  
+        @_stock_markets ||= FileDataProcessor.new.load_data!
       end
     end
   end

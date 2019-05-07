@@ -3,7 +3,6 @@
 require 'test_helper'
 
 module StockMarkets
-
   describe 'FileDataProcessor' do
     let(:file_data_processor) { StockMarkets::FileDataProcessor.new }
 
@@ -14,15 +13,17 @@ module StockMarkets
     end
 
     describe '#load_from_disk' do
+      subject { file_data_processor.load_from_disk }
+
       describe 'when file exists' do
         it 'returns instance of FileDataProcessor' do
-          expected = file_data_processor.load_from_disk.class
+          expected = subject.class
           assert_equal(expected, file_data_processor.class)
         end
 
         it 'adds parsed csv rows to data attribute' do
           expected = CSV.table(StockMarkets.configuration.data_file_path)
-          assert_equal(expected, file_data_processor.load_from_disk.data)
+          assert_equal(expected, subject.data)
         end
       end
 
@@ -35,42 +36,50 @@ module StockMarkets
 
         it 'raise an error' do
           assert_raises Errno::ENOENT do
-            file_data_processor.load_from_disk
+            subject
           end
         end
       end
     end
 
     describe '#transform_to_hash' do
+      subject { parsed_csv.transform_to_hash }
+
+      let(:parsed_csv) { file_data_processor.load_from_disk }
+
       describe 'when there is valid object in data attribute' do
         it 'returns instance of Hash in data attribute' do
-          expected = file_data_processor.load_from_disk.transform_to_hash.data.class
+          expected = subject.data.class
           assert_equal(expected, Hash)
         end
 
         it 'returns instance of FileDataProcessor' do
-          expected = file_data_processor.load_from_disk.transform_to_hash.class
+          expected = subject.class
           assert_equal(expected, StockMarkets::FileDataProcessor)
         end
 
-        it 'transform data attribute into hash' do
-          expected = file_data_processor.load_from_disk.transform_to_hash.data.class
+        it 'transforms data attribute into hash' do
+          expected = subject.data.class
           assert_equal(expected, Hash)
         end
       end
 
       describe 'when data attribute was rewrote before to not CSV::Table object' do
-        it 'raise an error' do
-          previous_state = file_data_processor.load_from_disk
-          previous_state.data = []
+        it 'raises an error' do
+          parsed_csv.data = []
           assert_raises TypeError do
-            previous_state.transform_to_hash
+            subject
           end
         end
       end
     end
 
     describe '#load_data!' do
+      subject { file_data_processor.load_data! }
+
+      it 'extracts data from csv and trarform it to hash to hash' do
+        assert_equal(subject.class, Hash)
+      end
     end
   end
 end

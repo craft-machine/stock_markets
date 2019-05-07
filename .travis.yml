@@ -1,7 +1,18 @@
----
 sudo: false
 language: ruby
+bundler_args: --without tools
+before_install:
+  - gem update --system
+  - gem update bundler
 cache: bundler
 rvm:
-  - 2.4.1
-before_install: gem install bundler -v 2.0.1
+  - 2.0.0
+  - 2.1.0
+  - 2.2.0
+  - 2.3.1
+  - 2.4.3
+  - 2.5.0
+notifications:
+  email:
+    - kirabsuir@gmail.com
+script: bundle exec rake test
