@@ -1,6 +1,7 @@
 # StockMarkets
 
 This gem provides information about stock markets.
+Supported ruby version starts from 2.3.1
 
 ## Installation
 
