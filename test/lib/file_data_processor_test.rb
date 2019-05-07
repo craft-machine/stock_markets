@@ -1,5 +1,6 @@
+# frozen_string_literal: true
+
 require 'test_helper'
-require 'csv'
 
 module StockMarkets
 
@@ -53,8 +54,8 @@ module StockMarkets
         end
 
         it 'transform data attribute into hash' do
-          expected = file_data_processor.load_from_disk.transform_to_hash
-          assert_equal(expected.data.values.to_json.to_csv, file_data_processor.load_from_disk.data.to_csv)
+          expected = file_data_processor.load_from_disk.transform_to_hash.data.class
+          assert_equal(expected, Hash)
         end
       end
 
@@ -67,6 +68,9 @@ module StockMarkets
           end
         end
       end
+    end
+
+    describe '#load_data!' do
     end
   end
 end
