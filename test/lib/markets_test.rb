@@ -33,7 +33,7 @@ module StockMarkets
     end
 
     describe '.[]' do
-      describe 'when market with passed mic or name is present' do
+      describe 'when market with passed mic is present' do
         subject { markets[existing_market_name] }
 
         let(:existing_market_name) { markets.table.first.first }
@@ -42,11 +42,11 @@ module StockMarkets
         end
       end
 
-      describe 'when market with passed mic or name is not present' do
+      describe 'when market with passed mic is not present' do
         subject { markets[fake_market_name] }
 
         let(:fake_market_name) { 'fake name' }
-        it 'returns data about market with passed name or mic as hash' do
+        it 'returns data about market with passed mic as hash' do
           assert_equal(subject.class, NilClass)
         end
       end

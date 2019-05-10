@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'stock_markets'
   spec.version       = StockMarkets::VERSION
   spec.authors       = ['Kirill Tatchihin']
-  spec.email         = ['kirabsuir@gmail.com']
+  spec.email         = ['kirill.tatchihin@craft.co']
 
   spec.summary       = %q{See information about stock markets from all over the World}
   spec.description   = %q{See information about stock markets from all over the World}

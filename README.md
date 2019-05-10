@@ -25,17 +25,20 @@ To interact with markets data use class `StockMarkets::Markets`. This class prov
 Examples of using:
 
 ```ruby
-# To get information about markets as hash, where key - MIC or name of market, value - market data
+# To get information about markets as hash, where key - MIC of market, value - market data
 StockMarkets::Markets.table #=>  {"AIXK"=>{:continent=>"Asia", :country=>"Kazakhstan ", :name=>"....} }
+
+# Some markets can be without mic in data source, that's why if you want get some additional information, you can use table_for_names
+StockMarkets::Markets.table_for_names #=> { "TEMATIC INTERNALISER"=>{:country=>"FRANCE", :iso_country_code_iso_3166=>"FR", :mic=>"SGOE", ...} }
 
 # To get information about markets as array(array of data for all markets)
 StockMarkets::Markets.data_list #=> [{:continent=>"Asia", :country=>"Kazakhstan ", :name=>"Astana Internat..."}]
 
 # Also you can iterate over markets with help of Enumerable module:
 StockMarkets::Markets.map do |market|
-  market[:continent]
+  market[:country]
 end
-#=> ["Asia", "South America", "North America", "Australia & Oceania"......]
+#=> ["GERMANY", "SWEDEN", ...]
 ```
 
 ## Development

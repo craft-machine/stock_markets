@@ -12,5 +12,6 @@ rvm:
   - 2.6.2
 notifications:
   email:
-    - kirabsuir@gmail.com
+    - kirill.tatchihin@craft.co
+    - alex.klimenkov@craft.co
 script: bundle exec rake test

@@ -4,27 +4,39 @@ module StockMarkets
 
     class << self
       def each(&block)
-        stock_markets.values.each do |stock|
+        stock_markets_with_mics.values.each do |stock|
           block.call(stock)
         end
       end
 
-      def [](stock_name_or_mic)
-        stock_markets[stock_name_or_mic]
+      def [](stock_mic)
+        stock_markets_with_mics[stock_mic]
       end
 
       def data_list
-        stock_markets.values
+        stock_markets_with_mics.values
       end
 
       def table
-        stock_markets
+        stock_markets_with_mics
+      end
+
+      def table_for_names
+        stock_markets_with_names
       end
 
       private
 
-      def stock_markets
-        @_stock_markets ||= FileDataProcessor.new.load_data!
+      def stock_markets_with_mics
+        @_stock_markets_with_mics ||= file_data_processor_data.load_data_for_mics!
+      end
+
+      def stock_markets_with_names
+        @_stock_markets_with_names ||= file_data_processor_data.load_data_for_names!
+      end
+
+      def file_data_processor_data(file_data_processor_klass = FileDataProcessor)
+        @_file_data_processor_data ||= file_data_processor_klass.new.load_from_disk!
       end
     end
   end

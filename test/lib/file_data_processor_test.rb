@@ -12,18 +12,13 @@ module StockMarkets
       end
     end
 
-    describe '#load_from_disk' do
-      subject { file_data_processor.load_from_disk }
+    describe '#load_from_disk!' do
+      subject { file_data_processor.load_from_disk! }
 
       describe 'when file exists' do
         it 'returns instance of FileDataProcessor' do
           expected = subject.class
           assert_equal(expected, file_data_processor.class)
-        end
-
-        it 'adds parsed csv rows to data attribute' do
-          expected = CSV.table(StockMarkets.configuration.data_file_path)
-          assert_equal(expected, subject.data)
         end
       end
 
@@ -45,7 +40,7 @@ module StockMarkets
     describe '#transform_to_hash' do
       subject { parsed_csv.transform_to_hash }
 
-      let(:parsed_csv) { file_data_processor.load_from_disk }
+      let(:parsed_csv) { file_data_processor.load_from_disk! }
 
       describe 'when there is valid object in data attribute' do
         it 'returns instance of Hash in data attribute' do
@@ -62,23 +57,73 @@ module StockMarkets
           expected = subject.data.class
           assert_equal(expected, Hash)
         end
-      end
 
-      describe 'when data attribute was rewrote before to not CSV::Table object' do
-        it 'raises an error' do
-          parsed_csv.data = []
-          assert_raises TypeError do
-            subject
+        describe 'when keyword parameter key_name is provided' do
+          describe 'when parameter under this name is present in data for market' do
+            subject { parsed_csv.transform_to_hash(key_name: :country) }
+            let(:stock_market_with_country) { CSV.table(StockMarkets.configuration.data_file_path).reject { |r| r[:country].nil? }[0] }
+
+            it 'builds a hash with data from key_name as key' do
+              assert_equal(subject.data.first.first, stock_market_with_country[:country])
+            end
+          end
+        end
+
+        describe 'when file contains also data about inactive markets(by status field)' do
+          let(:active_market_status_name) { StockMarkets::FileDataProcessor::ACTIVE_MARKET_STATUS_NAME }
+          let(:all_rows_from_csv) { CSV.table(StockMarkets.configuration.data_file_path) }
+          let(:inactive_markets) { all_rows_from_csv.select { |row| row[:status] != active_market_status_name } }
+
+          before do
+            StockMarkets.configure do |config|
+              config.data_file_path = 'test/helpers/example_data_with_inactive_markets_by_status_field.csv'
+            end
+          end
+
+          it 'includes only active stock markets in result set' do
+            expected = all_rows_from_csv.count - inactive_markets.count
+            assert_equal(subject.data.count, expected)
+          end
+        end
+
+        describe 'when file contains also data about inactive markets(by status_date field)' do
+          let(:all_rows_from_csv) { CSV.table(StockMarkets.configuration.data_file_path) }
+          let(:inactive_markets) { all_rows_from_csv.select { |row| Date.parse(row[:status_date]).year < Date.today.year - StockMarkets::FileDataProcessor::LAST_UPDATE_MARKET_MINIMAL_YEARS_COUNT } }
+
+          before do
+            StockMarkets.configure do |config|
+              config.data_file_path = 'test/helpers/example_data_with_old_markets.csv'
+            end
+          end
+
+          it 'includes only active stock markets in result set' do
+            expected = all_rows_from_csv.count - inactive_markets.count
+            assert_equal(subject.data.count, expected)
           end
         end
       end
     end
 
-    describe '#load_data!' do
-      subject { file_data_processor.load_data! }
+    describe '#load_from_disk!' do
+      subject { file_data_processor.load_from_disk! }
 
-      it 'extracts data from csv and trarform it to hash to hash' do
+      it 'extracts data from csv and trarforms it to hash(returns instance of StockMarkets::FileDataProcessor)' do
+        assert_equal(subject.class, StockMarkets::FileDataProcessor)
+      end
+    end
+
+    describe '#load_data_for_mics!' do
+      subject { parsed_csv.load_data_for_mics! }
+
+      let(:mic_sample) { CSV.table(StockMarkets.configuration.data_file_path)[0][:mic] }
+      let(:parsed_csv) { file_data_processor.load_from_disk! }
+
+      it 'extracts data from csv and trarforms it to hash' do
         assert_equal(subject.class, Hash)
+      end
+
+      it 'returns hash in data with MICs of markets as keys' do
+        assert_equal(subject.first.first, mic_sample)
       end
     end
   end
