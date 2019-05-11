@@ -11,7 +11,7 @@ module StockMarkets
 
     def initialize
       @data = []
-      @parsed_csv = load_from_disk!
+      load_from_disk!
     end
 
     def load_from_disk!
