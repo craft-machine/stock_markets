@@ -1,8 +1,7 @@
 # StockMarkets
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/stock_markets`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem provides information about stock markets.
+Supported ruby version starts from 2.3.1
 
 ## Installation
 
@@ -22,7 +21,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To interact with markets data use class `StockMarkets::Markets`. This class provides `Enumerable` on class level.
+Examples of using:
+
+```ruby
+# To get information about markets as hash, where key - MIC of market, value - market data
+StockMarkets::Markets.table #=>  {"AIXK"=>{:continent=>"Asia", :country=>"Kazakhstan ", :name=>"....} }
+
+# Some markets can be without mic in data source, that's why if you want get some additional information, you can use table_for_names
+StockMarkets::Markets.table_for_names #=> { "TEMATIC INTERNALISER"=>{:country=>"FRANCE", :iso_country_code_iso_3166=>"FR", :mic=>"SGOE", ...} }
+
+# To get information about markets as array(array of data for all markets)
+StockMarkets::Markets.data_list #=> [{:continent=>"Asia", :country=>"Kazakhstan ", :name=>"Astana Internat..."}]
+
+# Also you can iterate over markets with help of Enumerable module:
+StockMarkets::Markets.map do |market|
+  market[:country]
+end
+#=> ["GERMANY", "SWEDEN", ...]
+```
 
 ## Development
 

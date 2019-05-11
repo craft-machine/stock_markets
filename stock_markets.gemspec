@@ -7,21 +7,17 @@ Gem::Specification.new do |spec|
   spec.name          = 'stock_markets'
   spec.version       = StockMarkets::VERSION
   spec.authors       = ['Kirill Tatchihin']
-  spec.email         = ['kirabsuir@gmail.com']
+  spec.email         = ['kirill.tatchihin@craft.co']
 
-  spec.summary       = 'https://google.com'
-  spec.description   = 'https://google.com'
-  spec.homepage      = 'https://google.com'
+  spec.summary       = %q{See information about stock markets from all over the World}
+  spec.description   = %q{See information about stock markets from all over the World}
+  spec.homepage      = 'http://github.com/craft-machine/stock_markets'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = 'https://google.com'
-
     spec.metadata['homepage_uri'] = spec.homepage
-    spec.metadata['source_code_uri'] = 'https://google.com'
-    spec.metadata['changelog_uri'] = 'https://google.com'
   else
     raise 'RubyGems 2.0 or newer is required to protect against ' \
       'public gem pushes.'
