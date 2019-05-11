@@ -28,15 +28,15 @@ module StockMarkets
       private
 
       def stock_markets_with_mics
-        @_stock_markets_with_mics ||= file_data_processor_data.load_data_for_mics!
+        @_stock_markets_with_mics ||= file_data_processor.load_data_for_mics!
       end
 
       def stock_markets_with_names
-        @_stock_markets_with_names ||= file_data_processor_data.load_data_for_names!
+        @_stock_markets_with_names ||= file_data_processor.load_data_for_names!
       end
 
-      def file_data_processor_data(file_data_processor_klass = FileDataProcessor)
-        @_file_data_processor_data ||= file_data_processor_klass.new.load_from_disk!
+      def file_data_processor(file_data_processor_klass = FileDataProcessor)
+        @_file_data_processor ||= file_data_processor_klass.new
       end
     end
   end

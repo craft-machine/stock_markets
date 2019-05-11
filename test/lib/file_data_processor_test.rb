@@ -16,9 +16,9 @@ module StockMarkets
       subject { file_data_processor.load_from_disk! }
 
       describe 'when file exists' do
-        it 'returns instance of FileDataProcessor' do
+        it 'returns instance of CSV::Table' do
           expected = subject.class
-          assert_equal(expected, file_data_processor.class)
+          assert_equal(expected, CSV::Table)
         end
       end
 
@@ -38,9 +38,7 @@ module StockMarkets
     end
 
     describe '#transform_to_hash' do
-      subject { parsed_csv.transform_to_hash }
-
-      let(:parsed_csv) { file_data_processor.load_from_disk! }
+      subject { file_data_processor.transform_to_hash }
 
       describe 'when there is valid object in data attribute' do
         it 'returns instance of Hash in data attribute' do
@@ -60,7 +58,7 @@ module StockMarkets
 
         describe 'when keyword parameter key_name is provided' do
           describe 'when parameter under this name is present in data for market' do
-            subject { parsed_csv.transform_to_hash(key_name: :country) }
+            subject { file_data_processor.transform_to_hash(key_name: :country) }
             let(:stock_market_with_country) { CSV.table(StockMarkets.configuration.data_file_path).reject { |r| r[:country].nil? }[0] }
 
             it 'builds a hash with data from key_name as key' do
@@ -108,15 +106,14 @@ module StockMarkets
       subject { file_data_processor.load_from_disk! }
 
       it 'extracts data from csv and trarforms it to hash(returns instance of StockMarkets::FileDataProcessor)' do
-        assert_equal(subject.class, StockMarkets::FileDataProcessor)
+        assert_equal(subject.class, CSV::Table)
       end
     end
 
     describe '#load_data_for_mics!' do
-      subject { parsed_csv.load_data_for_mics! }
+      subject { file_data_processor.load_data_for_mics! }
 
       let(:mic_sample) { CSV.table(StockMarkets.configuration.data_file_path)[0][:mic] }
-      let(:parsed_csv) { file_data_processor.load_from_disk! }
 
       it 'extracts data from csv and trarforms it to hash' do
         assert_equal(subject.class, Hash)

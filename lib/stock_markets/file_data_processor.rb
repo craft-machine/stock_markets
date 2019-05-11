@@ -11,12 +11,11 @@ module StockMarkets
 
     def initialize
       @data = []
-      @parsed_csv = nil
+      @parsed_csv = load_from_disk!
     end
 
     def load_from_disk!
       self.parsed_csv = CSV.table(StockMarkets.configuration.data_file_path)
-      self
     end
 
     def transform_to_hash(key_name: :mic)
