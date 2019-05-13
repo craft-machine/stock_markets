@@ -3,6 +3,7 @@
 This gem provides information about stock markets.
 Supported ruby version starts from 2.3.1
 
+https://www.iso20022.org/10383/iso-10383-market-identifier-codes - origin for data files
 ## Installation
 
 Add this line to your application's Gemfile:
