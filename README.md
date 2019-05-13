@@ -1,7 +1,14 @@
 # StockMarkets
 
+[![Build Status](https://travis-ci.org/craft-machine/stock_markets.png?branch=master)](https://travis-ci.org/craft-machine/stock_markets)
+[![Inline docs](https://inch-ci.org/github/craft-machine/stock_markets.svg?branch=master)](https://inch-ci.org/github/craft-machine/stock_markets)
 This gem provides information about stock markets.
 Supported ruby version starts from 2.3.1
+
+## Bug reports
+
+If you discover a problem with StockMarkets gem, please report it to:
+https://github.com/craft-machine/stock_markets/issues
 
 ## Installation
 
