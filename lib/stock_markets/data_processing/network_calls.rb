@@ -1,3 +1,0 @@
-module StockMarkets
-  class 
-end

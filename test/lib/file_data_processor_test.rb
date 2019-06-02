@@ -12,8 +12,47 @@ module StockMarkets
       end
     end
 
+    describe '#load_from_network' do
+      subject { file_data_processor.load_from_network }
+
+      before do
+        StockMarkets.configure do |config|
+          config.data_file_path = 'test/helpers/loaded_network_data.csv'
+        end
+      end
+
+      describe 'when source exists' do
+        before do
+          StockMarkets.configure do |config|
+            config.source_file_url = 'https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv'
+          end
+        end
+
+        it 'returns instance of CSV::Table' do
+          assert_equal(subject.class, CSV::Table)
+        end
+      end
+
+      describe 'when source is unexisting url' do
+        before do
+          StockMarkets.configure do |config|
+            config.source_file_url = 'https://www.iso20022.org/123123123123'
+            config.data_file_path = 'unexisting'
+          end
+        end
+
+        it 'returns nil' do
+          assert_nil(subject)
+        end
+      end
+    end
+
     describe '#load_from_disk!' do
       subject { file_data_processor.load_from_disk! }
+
+      before do
+        StockMarkets::FileDataProcessor.any_instance.stubs(:load_from_network).returns(nil)
+      end
 
       describe 'when file exists' do
         it 'returns instance of CSV::Table' do
@@ -39,6 +78,10 @@ module StockMarkets
 
     describe '#transform_to_hash' do
       subject { file_data_processor.transform_to_hash }
+
+      before do
+        StockMarkets::FileDataProcessor.any_instance.stubs(:load_from_network).returns(nil)
+      end
 
       describe 'when there is valid object in data attribute' do
         it 'returns instance of Hash in data attribute' do
@@ -105,6 +148,10 @@ module StockMarkets
     describe '#load_from_disk!' do
       subject { file_data_processor.load_from_disk! }
 
+      before do
+        StockMarkets::FileDataProcessor.any_instance.stubs(:load_from_network).returns(nil)
+      end
+
       it 'extracts data from csv and trarforms it to hash(returns instance of StockMarkets::FileDataProcessor)' do
         assert_equal(subject.class, CSV::Table)
       end
@@ -112,6 +159,10 @@ module StockMarkets
 
     describe '#load_data_for_mics!' do
       subject { file_data_processor.load_data_for_mics! }
+
+      before do
+        StockMarkets::FileDataProcessor.any_instance.stubs(:load_from_network).returns(nil)
+      end
 
       let(:mic_sample) { CSV.table(StockMarkets.configuration.data_file_path)[0][:mic] }
 
