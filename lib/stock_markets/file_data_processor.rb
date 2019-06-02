@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 require 'csv'
+require 'open-uri'
+
 
 module StockMarkets
   # Class for handling processing of data file. Using configuration class to get absolute filepath to file
@@ -19,13 +21,32 @@ module StockMarkets
     # @return [StockMarkets::FileDataProcessor] instance of object for file data processing
     def initialize
       @data = []
-      load_from_disk!
+      @parsed_csv = load_from_network || load_from_disk!
     end
 
     # method launches parsing of csv data file
-    # @return [CSV::Table] instance of csv table inside of parsed_csv instance attribute
+    # @return [CSV::Table] instance of csv table
     def load_from_disk!
-      self.parsed_csv = CSV.table(StockMarkets.configuration.data_file_path)
+      CSV.table(StockMarkets.configuration.data_file_path)
+    end
+
+    # method launches downloading csv file and saving it to gem directory
+    # @return [CSV::Table] instance of csv table
+    def load_from_network
+      file_path = StockMarkets.configuration.data_file_path
+      File.open(file_path, 'w') do |_f|
+        uri = URI.parse(StockMarkets.configuration.source_file_url)
+        download = uri.open
+        IO.copy_stream(download, file_path)
+        CSV.new(download).each do |l|
+          p l
+        end
+      end
+      CSV.table(file_path)
+    rescue SocketError
+      puts 'No network or source is unavailable. Trying to load from local...'
+    rescue OpenURI::HTTPError
+      puts 'Invalid source_file_url provided. Trying to load from local...'
     end
 
     # method transforming csv table to hash and writing to data instance attribute 
@@ -37,7 +58,7 @@ module StockMarkets
 
       self.data = parsed_csv.each_with_object({}) do |data_row, result_hash|
         if market_recently_updated_proc.call(data_row, key_name)
-          result_hash[data_row[key_name.to_sym]] =  data_row.to_h
+          result_hash[data_row[key_name.to_sym]] = data_row.to_h
         end
       end
       self

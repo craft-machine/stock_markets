@@ -10,6 +10,7 @@ module StockMarkets
       StockMarkets.configure do |config|
         config.data_file_path = 'test/helpers/example_data.csv'
       end
+      StockMarkets::FileDataProcessor.any_instance.stubs(:load_from_network).returns(nil)
     end
 
     describe '.table' do

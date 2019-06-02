@@ -6,3 +6,5 @@
 /pkg/
 /spec/reports/
 /tmp/
+/test/helpers/loaded_network_data.csv
+/unexisting

@@ -19,5 +19,21 @@ module StockMarkets
         assert_equal 'helpers/some_data.log', config.data_file_path
       end
     end
+
+    describe '#source_file_url' do
+      it "default value is url to source ile" do
+        data_file_path = Configuration.new.source_file_url
+        expected_file_path = 'https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv'
+        assert_equal data_file_path, expected_file_path
+      end
+    end
+
+    describe '#source_file_url=' do
+      it 'can set value' do
+        config = Configuration.new
+        config.source_file_url = 'some_url'
+        assert_equal 'some_url', config.source_file_url
+      end
+    end
   end
 end
