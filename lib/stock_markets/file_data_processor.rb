@@ -51,9 +51,7 @@ module StockMarkets
 
     def market_recently_updated_proc
       @_market_recently_updated_proc ||= proc do |data_row, key_name|
-        (Date.parse(data_row[:status_date]) >= last_update_market_minimal_date) && 
-        data_row[:status] == ACTIVE_MARKET_STATUS_NAME &&
-        !data_row[key_name].nil?
+        data_row[:status] == ACTIVE_MARKET_STATUS_NAME && !data_row[key_name].nil?
       end
     end
   end
