@@ -3,7 +3,6 @@ language: ruby
 bundler_args: --without tools
 before_install:
   - gem install bundler
-  - gem update bundler
 cache: bundler
 rvm:
   - 2.3.1
