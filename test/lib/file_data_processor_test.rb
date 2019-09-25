@@ -83,22 +83,6 @@ module StockMarkets
             assert_equal(subject.data.count, expected)
           end
         end
-
-        describe 'when file contains also data about inactive markets(by status_date field)' do
-          let(:all_rows_from_csv) { CSV.table(StockMarkets.configuration.data_file_path) }
-          let(:inactive_markets) { all_rows_from_csv.select { |row| Date.parse(row[:status_date]).year < Date.today.year - StockMarkets::FileDataProcessor::LAST_UPDATE_MARKET_MINIMAL_YEARS_COUNT } }
-
-          before do
-            StockMarkets.configure do |config|
-              config.data_file_path = 'test/helpers/example_data_with_old_markets.csv'
-            end
-          end
-
-          it 'includes only active stock markets in result set' do
-            expected = all_rows_from_csv.count - inactive_markets.count
-            assert_equal(subject.data.count, expected)
-          end
-        end
       end
     end
 
